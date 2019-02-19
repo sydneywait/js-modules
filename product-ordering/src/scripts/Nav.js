@@ -6,4 +6,4 @@ const makeNavBar = () => {
     document.querySelector("#nav-bar").innerHTML=navString
 }
 
-export default makeNavBar();
+export default makeNavBar;
