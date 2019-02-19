@@ -1,9 +1,10 @@
+import makeContactForm from "./contactForm"
 import printAllContacts from "./contactList.js"
 import contactManager from "./contactCollection.js"
 import contactBuilder from "./contact.js"
 
-
-printAllContacts()
+makeContactForm();
+printAllContacts();
 
 document.querySelector("#submit-btn").addEventListener("click", ()=>{
 
@@ -14,13 +15,6 @@ const phone = document.querySelector("#phone-number").value
 
 const contactObject = contactBuilder.buildContactObject(firstName, lastName, phone, address)
 
-// const contactObject = {
-
-//             "firstName": firstName,
-//             "lastName": lastName,
-//             "phoneNumber": phone,
-//             "address": address
-//         }
         contactManager.addContact(contactObject)
         .then(printAllContacts)
 })

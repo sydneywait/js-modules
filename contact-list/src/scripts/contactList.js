@@ -12,7 +12,6 @@ contactManager.getAllContacts()
 console.log(parsedContacts)
 parsedContacts.forEach(singleContactObject=> {
     const contactHTMLString = contactBuilder.buildContact(singleContactObject)
-    console.log(contactHTMLString);
     document.querySelector("#contact-list").innerHTML+=contactBuilder.buildContact(singleContactObject)
 
 });
