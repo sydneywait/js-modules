@@ -1,26 +1,20 @@
-// this module will call api to get all employees
-
-const getAllContacts = () => {
-
-    return fetch("http://localhost:8088/contacts")
-        .then(contacts => contacts.json())
-}
-
-
-const addContact = (contactObject) => {
-    return fetch("http://localhost:8088/contacts", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(contactObject)
-    })
-}
+// this module will call api to get all contacts, and to add another contact
 
 const contactManager = {
-    "getAllContacts": getAllContacts(),
-    "addContact": addContact(contactObject)
+    getAllContacts: () => {
 
+        return fetch("http://localhost:8088/contacts")
+            .then(contacts => contacts.json())
+    },
+    addContact: (contactObject) => {
+        return fetch("http://localhost:8088/contacts", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(contactObject)
+        })
+    }
 }
 
-export default getAllContacts;
+export default contactManager;

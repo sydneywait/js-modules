@@ -1,17 +1,19 @@
 // this module should import from apiManager (get employees) and loop through and option to print one or all
 //export an object with methods (print all, print single)
 
-import getAllContacts from "./contactCollection.js"
-import buildContact from "./contact.js"
+import contactManager from "./contactCollection.js"
+import contactBuilder from "./contact.js"
 
 const printAllContacts =()=>{
-getAllContacts()
+document.querySelector("#contact-list").innerHTML=""
+
+contactManager.getAllContacts()
 .then((parsedContacts)=>{
 console.log(parsedContacts)
 parsedContacts.forEach(singleContactObject=> {
-    const contactHTMLString = buildContact(singleContactObject)
+    const contactHTMLString = contactBuilder.buildContact(singleContactObject)
     console.log(contactHTMLString);
-    document.querySelector("#contact-list").innerHTML+=buildContact(singleContactObject)
+    document.querySelector("#contact-list").innerHTML+=contactBuilder.buildContact(singleContactObject)
 
 });
 
