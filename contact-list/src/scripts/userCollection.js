@@ -19,8 +19,6 @@ const userManager = {
         return fetch(`http://localhost:8088/users?${userKey}=${userValue}`)
             .then(users => users.json())
     },
-
-
     }
 
 

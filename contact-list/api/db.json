@@ -39,6 +39,46 @@
       "address": "4154 Blue Sulphur Rd",
       "userId": "2",
       "id": 5
+    },
+    {
+      "firstName": "Patrick",
+      "lastName": "Spongebob",
+      "phoneNumber": "1234567890",
+      "address": "Pineapple under the sea",
+      "userId": "2",
+      "id": 6
+    },
+    {
+      "firstName": "Logan ",
+      "lastName": "Stanton",
+      "phoneNumber": "788344899",
+      "address": "3 Rue Des Ecoles",
+      "userId": "1",
+      "id": 7
+    },
+    {
+      "firstName": "david",
+      "lastName": "Bird",
+      "phoneNumber": "slack him",
+      "address": "huntington",
+      "userId": "6",
+      "id": 8
+    },
+    {
+      "firstName": "Thomas",
+      "lastName": "Wait",
+      "phoneNumber": "3043000869",
+      "address": "4154 Blue Sulphur Rd",
+      "userId": "9",
+      "id": 9
+    },
+    {
+      "firstName": "b",
+      "lastName": "b",
+      "phoneNumber": "b",
+      "address": "b",
+      "userId": "10",
+      "id": 10
     }
   ],
   "users": [
@@ -76,6 +116,48 @@
       "userName": "thomas",
       "password": "wait",
       "id": 5
+    },
+    {
+      "firstName": "kim",
+      "lastName": "preece",
+      "userName": "preece",
+      "password": "passwrord",
+      "id": 6
+    },
+    {
+      "firstName": "Joe",
+      "lastName": "Schmoe",
+      "userName": "joe",
+      "password": "schmoe",
+      "id": 7
+    },
+    {
+      "firstName": "Jordan",
+      "lastName": "Castelloe",
+      "userName": "jordan",
+      "password": "castelloe",
+      "id": 8
+    },
+    {
+      "firstName": "John",
+      "lastName": "Smith",
+      "userName": "john",
+      "password": "smoth",
+      "id": 9
+    },
+    {
+      "firstName": "doug",
+      "lastName": "dougy",
+      "userName": "doug",
+      "password": "doug",
+      "id": 10
+    },
+    {
+      "firstName": "Sydney",
+      "lastName": "Wait",
+      "userName": "syd",
+      "password": "wait",
+      "id": 11
     }
   ]
 }
