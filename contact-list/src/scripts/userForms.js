@@ -17,11 +17,23 @@ const userForms = {
     },
     makeLogoutForm: () => {
 
-        document.querySelector("#login-container").innerHTML = `<button type="submit" id="logout-btn">logout</button>`
+        document.querySelector("#login-container").innerHTML =
+        `<button type="submit" id="logout-btn">logout</button>
+        <button type="submit" id="update-btn">Change Password</button>`
 
     },
     removeRegisterForm:()=>{
         document.querySelector("#register-container").innerHTML=""
+    },
+    makePasswordChangeForm:(userName)=>{
+
+        document.querySelector("#login-container").innerHTML=
+        `<fieldset><legend>Change Your Password</legend>
+        <input type="text" name="userName" id="user-change-name" value="${userName}"><br>
+        <input type="text" name="password" id="user-change-password" placeholder="Enter Password"><br>
+        <input type="text" name="password" id="user-change-password" placeholder="Enter Password Again"><br>
+        <button type="submit" id="change-btn">submit</button>
+        </fieldset>`
     }
 
 }

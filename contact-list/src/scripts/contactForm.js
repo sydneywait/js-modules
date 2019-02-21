@@ -13,6 +13,9 @@ const contactForms = {
 
     removeContactForm: () => {
         document.querySelector("#form-container").innerHTML = ""
+    },
+    removeContactList: ()=>{
+        document.querySelector("#contact-list").innerHTML = ""
     }
 }
 export default contactForms;
