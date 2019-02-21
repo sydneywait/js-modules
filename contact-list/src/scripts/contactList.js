@@ -22,8 +22,8 @@ parsedContacts.forEach(singleContactObject=> {
 },
 printUserContacts:()=>{
     document.querySelector("#contact-list").innerHTML=""
-
-    contactManager.getUserContacts()
+    const userId = sessionStorage.getItem("userId")
+    contactManager.getUserContacts(userId)
     .then((parsedContacts)=>{
     console.log(parsedContacts)
     parsedContacts.forEach(singleContactObject=> {

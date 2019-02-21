@@ -1,5 +1,46 @@
 {
-  "contacts": [],
+  "contacts": [
+    {
+      "firstName": "Thomas",
+      "lastName": "Wait",
+      "phoneNumber": "463525987",
+      "address": "123 Main St",
+      "userId": "1",
+      "id": 1
+    },
+    {
+      "firstName": "Sydney",
+      "lastName": "Wait",
+      "phoneNumber": "3021549875",
+      "address": "1565 High st",
+      "userId": "2",
+      "id": 2
+    },
+    {
+      "firstName": "Isaac",
+      "lastName": "Wait",
+      "phoneNumber": "3021549875",
+      "address": "1565 High st",
+      "userId": "3",
+      "id": 3
+    },
+    {
+      "firstName": "Isaac",
+      "lastName": "Wait",
+      "phoneNumber": "3021549875",
+      "address": "1565 High st",
+      "userId": "3",
+      "id": 4
+    },
+    {
+      "firstName": "Thomas",
+      "lastName": "Wait",
+      "phoneNumber": "3043000869",
+      "address": "4154 Blue Sulphur Rd",
+      "userId": "2",
+      "id": 5
+    }
+  ],
   "users": [
     {
       "firstName": "Sydney",

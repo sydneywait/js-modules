@@ -22,7 +22,7 @@ document.querySelector("#submit-btn").addEventListener("click", () => {
         const contactObject = contactBuilder.buildContactObject(firstName, lastName, phone, address)
 
         contactManager.addContact(contactObject)
-                .then(printAllContacts)
+                .then(printContacts.printUserContacts)
 })
 
 document.querySelector("#register-btn").addEventListener("click", () => {
@@ -35,24 +35,25 @@ document.querySelector("#register-btn").addEventListener("click", () => {
         const userObject = userBuilder.buildUserObject(firstName, lastName, userName, password)
 
         userManager.addUser(userObject)
-        .then(user => user.json())
+                .then(user => user.json())
                 .then((user) => {
                         console.log("you just added a user!", user)
-                        sessionStorage.setItem("userId", user.id, )
+                        sessionStorage.setItem("userId", user.id)
                 })
 })
 
 document.querySelector("#login-btn").addEventListener("click", () => {
 
         const userName = document.querySelector("#user-login-name").value
-        const password = document.querySelector("#user-password-name").value
+        const password = document.querySelector("#user-login-password").value
 
-        getSingleUser(userName)
-.then((singleUser)=>{
-        sessionStorage.setItem("userId", singleUser[userId])
-        printContacts.printUserContacts(singleUser[userId])
+        userManager.getSingleUser(userName)
+                .then((singleUser) => {
+                        console.log(singleUser)
+                        sessionStorage.setItem("userId", singleUser[0].id)
+                        printContacts.printUserContacts(singleUser[0].id)
 
-})
+                })
 
 
 
