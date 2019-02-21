@@ -3,6 +3,7 @@
 
 import contactManager from "./contactCollection.js"
 import contactBuilder from "./contact.js"
+import userManager from "./userCollection.js";
 
 const printContacts = {
 
@@ -23,9 +24,16 @@ parsedContacts.forEach(singleContactObject=> {
 printUserContacts:()=>{
     document.querySelector("#contact-list").innerHTML=""
     const userId = sessionStorage.getItem("userId")
+
+    userManager.getSingleUser("id", userId)
+    .then((user)=>{
+        console.log("get single user", user)
+        document.querySelector("#contact-list").innerHTML=`<h1>${user[0].firstName} ${user[0].lastName}'s Contacts</h1>`
+    })
     contactManager.getUserContacts(userId)
     .then((parsedContacts)=>{
     console.log(parsedContacts)
+
     parsedContacts.forEach(singleContactObject=> {
         const contactHTMLString = contactBuilder.buildContact(singleContactObject)
         document.querySelector("#contact-list").innerHTML+=contactBuilder.buildContact(singleContactObject)

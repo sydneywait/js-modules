@@ -15,8 +15,8 @@ const userManager = {
             body: JSON.stringify(userObject)
         })
     },
-    getSingleUser:(userName)=>{
-        return fetch(`http://localhost:8088/users?userName=${userName}`)
+    getSingleUser:(userKey, userValue)=>{
+        return fetch(`http://localhost:8088/users?${userKey}=${userValue}`)
             .then(users => users.json())
     },
 
