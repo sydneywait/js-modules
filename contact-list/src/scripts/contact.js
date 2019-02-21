@@ -18,7 +18,8 @@ const contactBuilder ={
             firstName: firstName,
             lastName: lastName,
             phoneNumber: phone,
-            address: address
+            address: address,
+            userId: sessionStorage.getItem("userId")
         }
 
         return contactObject;

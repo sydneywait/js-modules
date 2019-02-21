@@ -1,81 +1,40 @@
 {
-  "contacts": [
+  "contacts": [],
+  "users": [
     {
       "firstName": "Sydney",
       "lastName": "Wait",
-      "phoneNumber": "304-521-0567",
-      "address": "211 Main St",
+      "userName": "sydney",
+      "password": "wait",
       "id": 1
     },
     {
       "firstName": "Isaac",
       "lastName": "Wait",
-      "phoneNumber": "",
-      "address": "",
+      "userName": "isaac",
+      "password": "wait",
       "id": 2
     },
     {
-      "firstName": "Isaac",
+      "firstName": "George",
       "lastName": "Wait",
-      "phoneNumber": "3043000869",
-      "address": "4154 Blue Sulphur Rd",
+      "userName": "george",
+      "password": "wait",
       "id": 3
     },
     {
-      "firstName": "George",
-      "lastName": "Wait ",
-      "phoneNumber": "3043000869",
-      "address": "4154 Blue Sulphur Rd",
+      "firstName": "Logan",
+      "lastName": "Stanton",
+      "userName": "logan",
+      "password": "stanton",
       "id": 4
     },
     {
       "firstName": "Thomas",
       "lastName": "Wait",
-      "phoneNumber": "3043000869",
-      "address": "4154 Blue Sulphur Rd",
+      "userName": "thomas",
+      "password": "wait",
       "id": 5
-    },
-    {
-      "firstName": "Connie",
-      "lastName": "Wait",
-      "phoneNumber": "30452145898",
-      "address": "464 E Bayton St",
-      "id": 6
-    },
-    {
-      "firstName": "blue",
-      "lastName": "fjlfjdskl",
-      "phoneNumber": "56465456456",
-      "address": "4564654654",
-      "id": 7
-    },
-    {
-      "firstName": "blue",
-      "lastName": "fjlfjdskl",
-      "phoneNumber": "56465456456",
-      "address": "4564654654",
-      "id": 8
-    },
-    {
-      "firstName": "charlie",
-      "lastName": "rose",
-      "phoneNumber": "",
-      "address": "",
-      "id": 9
-    },
-    {
-      "firstName": "Jordan",
-      "lastName": "Castelloe",
-      "phoneNumber": "565465465",
-      "address": "454564654",
-      "id": 10
-    },
-    {
-      "firstName": "Thomas",
-      "lastName": "Wait",
-      "phoneNumber": "3043000869",
-      "address": "4154 Blue Sulphur Rd",
-      "id": 11
     }
   ]
 }

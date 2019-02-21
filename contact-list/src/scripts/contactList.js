@@ -4,7 +4,9 @@
 import contactManager from "./contactCollection.js"
 import contactBuilder from "./contact.js"
 
-const printAllContacts =()=>{
+const printContacts = {
+
+printAllContacts:()=>{
 document.querySelector("#contact-list").innerHTML=""
 
 contactManager.getAllContacts()
@@ -14,9 +16,27 @@ parsedContacts.forEach(singleContactObject=> {
     const contactHTMLString = contactBuilder.buildContact(singleContactObject)
     document.querySelector("#contact-list").innerHTML+=contactBuilder.buildContact(singleContactObject)
 
-});
+})
 
 })
+},
+printUserContacts:()=>{
+    document.querySelector("#contact-list").innerHTML=""
+
+    contactManager.getUserContacts()
+    .then((parsedContacts)=>{
+    console.log(parsedContacts)
+    parsedContacts.forEach(singleContactObject=> {
+        const contactHTMLString = contactBuilder.buildContact(singleContactObject)
+        document.querySelector("#contact-list").innerHTML+=contactBuilder.buildContact(singleContactObject)
+
+    })
+
+    })
+    }
+
 }
 
-export default printAllContacts;
+
+
+export default printContacts;
