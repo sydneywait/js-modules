@@ -3,11 +3,13 @@
 
 const contactBuilder ={
     buildContact: (singleContact) =>{
-
-        return `<div>
+        const userId = sessionStorage.getItem("userId")
+        return `<div id="user-${userId}-contact-${singleContact.id}">
         <h3>${singleContact.firstName} ${singleContact.lastName}</h3>
         <p>${singleContact.phoneNumber}</p>
         <p>${singleContact.address}</p>
+        <button id ="edit-contact-${singleContact.id}" type = "submit">edit</button>
+        <button id ="delete-contact-${singleContact.id}" type = "submit">delete</button>
         </div>`
 
     },

@@ -79,6 +79,22 @@
       "address": "b",
       "userId": "10",
       "id": 10
+    },
+    {
+      "firstName": "Jose",
+      "lastName": "Jones",
+      "phoneNumber": "561-8077",
+      "address": "4155 Green Sulphur Ln",
+      "userId": "15",
+      "id": 11
+    },
+    {
+      "firstName": "Carlos",
+      "lastName": "Anderson",
+      "phoneNumber": "212-4456",
+      "address": "454 Bear Hollow Pkwy",
+      "userId": "15",
+      "id": 12
     }
   ],
   "users": [
@@ -179,6 +195,13 @@
       "userName": "niiccckkk",
       "password": "1",
       "id": 14
+    },
+    {
+      "firstName": "Megamind",
+      "lastName": "Jones",
+      "userName": "MMJ",
+      "password": "tacobell",
+      "id": 15
     }
   ]
 }

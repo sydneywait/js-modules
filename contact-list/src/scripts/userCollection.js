@@ -19,7 +19,19 @@ const userManager = {
         return fetch(`http://localhost:8088/users?${userKey}=${userValue}`)
             .then(users => users.json())
     },
+    updatePassword:(patchObject, id)=>{
+            return fetch(`http://localhost:8088/users/${id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(patchObject)
+            })
+        },
+
     }
 
 
+
 export default userManager;
+

@@ -29,7 +29,6 @@ document.querySelector("#form-container").addEventListener("click", () => {
         }
 })
 //Add event listener on the register button to register a new user
-
 document.querySelector("#register-container").addEventListener("click", () => {
         if (event.target.id === "register-btn") {
 
@@ -77,6 +76,9 @@ document.querySelector("#login-container").addEventListener("click", () => {
                                         console.log("The username of", userName, "was verified")
                                         //If username exists, move on to verifying the password
                                         loginManager.verifyPassword(singleUser, password)
+                                        userForms.makeLogoutForm();
+                                        userForms.removeRegisterForm();
+                                        contactForms.makeContactForm();
                                 }
                                 else {
                                         //If username does not exist, give alert
@@ -104,13 +106,39 @@ document.querySelector("#login-container").addEventListener("click", () => {
                                 contactForms.removeContactForm();
                                 contactForms.removeContactList();
                         })
+        }
+        if (event.target.id === "change-password-btn") {
+                console.log("you clicked the button to change your password")
+                const userId = sessionStorage.getItem("userId")
+                const password1 = document.querySelector("#user-change-password1").value
+                const password2 = document.querySelector("#user-change-password2").value
+                if (password1 === password2) {
+                        const patchObject = {
+                                password: password1
+                        }
 
+                        userManager.updatePassword(patchObject, userId)
+                        window.alert("Your password was successfully changed")
+                        userForms.makeLogoutForm();
+                        contactForms.makeContactForm();
+                        printContacts.printUserContacts(userId)
+                }
+                else {
+                        window.alert("The passwords do not match")
+
+                }
 
 
 
         }
+        document.querySelector("#contact-list").addEventListener("click",()=>{
+        const target = event.target.id.split("-")[0]
+        const contactId = event.target.id.split("-")[2]
+
+        console.log("you clicked the button")
 
 
+        })
 })
 
 

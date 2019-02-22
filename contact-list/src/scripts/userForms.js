@@ -13,6 +13,7 @@ const userForms = {
         <input type="text" name="userName" id="user-login-name" placeholder="Enter Username"><br>
         <input type="password" name="password" id="user-login-password" placeholder="Enter Password"><br>
         <button type="submit" id="login-btn">login</button>
+        <button type="submit" id="register-btn">login</button>
         </fieldset>`
     },
     makeLogoutForm: () => {
@@ -30,9 +31,9 @@ const userForms = {
         document.querySelector("#login-container").innerHTML=
         `<fieldset><legend>Change Your Password</legend>
         <input type="text" name="userName" id="user-change-name" value="${userName}"><br>
-        <input type="text" name="password" id="user-change-password" placeholder="Enter Password"><br>
-        <input type="text" name="password" id="user-change-password" placeholder="Enter Password Again"><br>
-        <button type="submit" id="change-btn">submit</button>
+        <input type="text" name="password" id="user-change-password1" placeholder="Enter Password"><br>
+        <input type="text" name="password" id="user-change-password2" placeholder="Enter Password Again"><br>
+        <button type="submit" id="change-password-btn">submit</button>
         </fieldset>`
     }
 
