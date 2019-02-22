@@ -1,7 +1,7 @@
 {
   "contacts": [
     {
-      "firstName": "Isaac",
+      "firstName": "Peter",
       "lastName": "Wait",
       "phoneNumber": "463525987",
       "address": "123 Main St",
@@ -111,6 +111,14 @@
       "address": "455454",
       "userId": "1",
       "id": 15
+    },
+    {
+      "firstName": "Sydney",
+      "lastName": "Wait",
+      "phoneNumber": "45465465454465",
+      "address": "4564545445465465",
+      "userId": "1",
+      "id": 16
     }
   ],
   "users": [
@@ -225,6 +233,13 @@
       "userName": "megan",
       "password": "madden",
       "id": 16
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "userName": "",
+      "password": "",
+      "id": 17
     }
   ]
 }

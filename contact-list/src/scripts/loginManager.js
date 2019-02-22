@@ -10,7 +10,7 @@ const loginManager ={
         {
             console.log("password matched")
             userForms.makeLogoutForm();
-            userForms.removeRegisterForm();
+            // userForms.removeRegisterForm();
             contactForms.makeContactForm();
             sessionStorage.setItem("userId", user[0].id)
             printContacts.printUserContacts(user[0].id)

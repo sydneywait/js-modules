@@ -1,0 +1,79 @@
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Poppins', sans-serif;
+}
+
+p{
+
+    font-family: 'Kodchasan', sans-serif;
+}
+.big-btn{
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    align-self: center;
+
+}
+.sm-btn{
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 20px;
+    align-self: center;
+
+
+}
+.green-btn{
+    background-color: #4CAF50; /* Green */
+
+}
+.red-btn{
+    background-color: #ff4d4d; /* Red */
+}
+
+.blue-btn{
+    background-color: cornflowerblue;
+}
+
+input{
+
+    background-color: #e6ffff;
+    border: none;
+    border-bottom: solid gray 1px;
+    padding: 15px 32px;
+    margin-bottom: 10px;
+    width: 200px;
+    font-size: 18px;
+}
+
+
+.contacts{
+border: solid gray 1px;
+width: 250px;
+margin: 20px;
+padding: 20px;
+
+}
+
+#contact-list{
+
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+
+.make-contact, .register-input{
+
+    width: 250px;
+}
