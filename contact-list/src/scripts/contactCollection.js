@@ -6,6 +6,11 @@ const contactManager = {
         return fetch("http://localhost:8088/contacts")
             .then(contacts => contacts.json())
     },
+    getSingleContact: (contactId) => {
+
+        return fetch(`http://localhost:8088/contacts/${contactId}`)
+            .then(contacts => contacts.json())
+    },
 
     addContact: (contactObject) => {
         return fetch("http://localhost:8088/contacts", {
@@ -27,12 +32,12 @@ const contactManager = {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
-            },
-            body: JSON.stringify(contactObject)
+            }
+
         })
     },
 
-    editContact: (contactObject, id)=>{
+    editSingleContact: (contactObject, id)=>{
         return fetch(`http://localhost:8088/contacts/${id}`, {
             method: "PUT",
             headers: {

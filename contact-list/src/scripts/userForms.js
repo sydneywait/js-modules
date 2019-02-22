@@ -13,8 +13,11 @@ const userForms = {
         <input type="text" name="userName" id="user-login-name" placeholder="Enter Username"><br>
         <input type="password" name="password" id="user-login-password" placeholder="Enter Password"><br>
         <button type="submit" id="login-btn">login</button>
-        <button type="submit" id="register-btn">login</button>
+        <button type="submit" id="show-register-btn">Register</button>
         </fieldset>`
+    },
+    removeLoginForm:()=>{
+        document.querySelector("#login-container").innerHTML =""
     },
     makeLogoutForm: () => {
 

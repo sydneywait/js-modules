@@ -9,7 +9,7 @@ import loginManager from "./loginManager.js"
 
 // printContacts.printAllContacts();
 
-userForms.makeRegisterForm();
+
 userForms.makeLoginForm();
 
 //Add event listener on the contact button to save a contact and post to JSON
@@ -64,6 +64,11 @@ document.querySelector("#register-container").addEventListener("click", () => {
 //Event listener on the login container
 document.querySelector("#login-container").addEventListener("click", () => {
         //add event listener on the login button to log in a user and store their userID in the session
+        if (event.target.id === "show-register-btn") {
+                userForms.makeRegisterForm();
+                userForms.removeLoginForm();
+        }
+
         if (event.target.id === "login-btn") {
                 const userName = document.querySelector("#user-login-name").value
                 const password = document.querySelector("#user-login-password").value
@@ -76,9 +81,7 @@ document.querySelector("#login-container").addEventListener("click", () => {
                                         console.log("The username of", userName, "was verified")
                                         //If username exists, move on to verifying the password
                                         loginManager.verifyPassword(singleUser, password)
-                                        userForms.makeLogoutForm();
-                                        userForms.removeRegisterForm();
-                                        contactForms.makeContactForm();
+
                                 }
                                 else {
                                         //If username does not exist, give alert
@@ -90,7 +93,6 @@ document.querySelector("#login-container").addEventListener("click", () => {
         if (event.target.id === "logout-btn") {
                 sessionStorage.clear("userId")
                 console.log("user id cleared")
-                userForms.makeRegisterForm()
                 userForms.makeLoginForm()
                 contactForms.removeContactList();
                 contactForms.removeContactForm();
@@ -131,14 +133,54 @@ document.querySelector("#login-container").addEventListener("click", () => {
 
 
         }
-        document.querySelector("#contact-list").addEventListener("click",()=>{
-        const target = event.target.id.split("-")[0]
-        const contactId = event.target.id.split("-")[2]
 
-        console.log("you clicked the button")
+})
+
+document.querySelector("#contact-list").addEventListener("click", () => {
+        const target = event.target.id.split("-")
+        const userId = sessionStorage.getItem("userId")
+
+        if (target[0] === "delete") {
+                const contactId=target[2]
+                console.log("you clicked the", target, "button")
+                contactManager.deleteContact(contactId)
+                .then((printContacts.printUserContacts))
 
 
-        })
+
+        }
+        if (target[0] === "edit"){
+                const contactId=target[2]
+                console.log("you clicked the", target, "button")
+
+                contactManager.getSingleContact(contactId)
+                .then((singleContact)=>{
+
+                        contactForms.makeEditContactForm(userId, contactId, singleContact)
+                })
+
+        }
+        if (target[0] === "submit") {
+                const contactId=target[2]
+                console.log("you clicked the", target, "button")
+                const firstName = document.querySelector("#edit-first-name").value
+                const lastName = document.querySelector("#edit-last-name").value
+                const phone = document.querySelector("#edit-phone-number").value
+                const address = document.querySelector("#edit-address").value
+
+                const contactObject=contactBuilder.buildContactObject(firstName, lastName, phone, address)
+
+                contactManager.editSingleContact(contactObject, contactId)
+                .then(printContacts.printUserContacts)
+
+        }
+        if (target[0] === "cancel") {
+                console.log("you clicked the", target, "button")
+                printContacts.printUserContacts()
+                }
+
+
+
 })
 
 

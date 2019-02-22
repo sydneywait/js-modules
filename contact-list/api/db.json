@@ -1,7 +1,7 @@
 {
   "contacts": [
     {
-      "firstName": "Thomas",
+      "firstName": "Isaac",
       "lastName": "Wait",
       "phoneNumber": "463525987",
       "address": "123 Main St",
@@ -49,14 +49,6 @@
       "id": 6
     },
     {
-      "firstName": "Logan ",
-      "lastName": "Stanton",
-      "phoneNumber": "788344899",
-      "address": "3 Rue Des Ecoles",
-      "userId": "1",
-      "id": 7
-    },
-    {
       "firstName": "david",
       "lastName": "Bird",
       "phoneNumber": "slack him",
@@ -95,6 +87,30 @@
       "address": "454 Bear Hollow Pkwy",
       "userId": "15",
       "id": 12
+    },
+    {
+      "firstName": "David",
+      "lastName": "Bird",
+      "phoneNumber": "454654564",
+      "address": "45465465",
+      "userId": "16",
+      "id": 13
+    },
+    {
+      "firstName": "George",
+      "lastName": "Wait",
+      "phoneNumber": "456465",
+      "address": "44545",
+      "userId": "5",
+      "id": 14
+    },
+    {
+      "firstName": "George",
+      "lastName": "Wait",
+      "phoneNumber": "45465",
+      "address": "455454",
+      "userId": "1",
+      "id": 15
     }
   ],
   "users": [
@@ -202,6 +218,13 @@
       "userName": "MMJ",
       "password": "tacobell",
       "id": 15
+    },
+    {
+      "firstName": "Megan",
+      "lastName": "Madden",
+      "userName": "megan",
+      "password": "madden",
+      "id": 16
     }
   ]
 }

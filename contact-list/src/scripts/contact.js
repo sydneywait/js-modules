@@ -8,8 +8,8 @@ const contactBuilder ={
         <h3>${singleContact.firstName} ${singleContact.lastName}</h3>
         <p>${singleContact.phoneNumber}</p>
         <p>${singleContact.address}</p>
-        <button id ="edit-contact-${singleContact.id}" type = "submit">edit</button>
-        <button id ="delete-contact-${singleContact.id}" type = "submit">delete</button>
+        <button type = "submit" id ="edit-contact-${singleContact.id}">edit</button>
+        <button type = "submit" id ="delete-contact-${singleContact.id}" >delete</button>
         </div>`
 
     },
